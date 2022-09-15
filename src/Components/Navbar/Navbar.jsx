@@ -1,19 +1,17 @@
 import React from 'react';
 import './Navbar.scss';
+import Logo from '../../assets/img/icon2.svg';
+import NavItems from './NavItems/NavItems';
 
 function Navbar() {
   return (
     <div className='navbar'>
         <div className='navbar-wrapper'>
             <div className="logo-container">
-                <img src="" alt="logo esdev" />
-                <h3>ESDev</h3>
+                <img src={Logo} alt="logo esdev" />
+                <h1>ESDev</h1>
             </div>
-            <div className="nav-items">
-                <h3>Hola</h3>
-                <h3>Todo</h3>
-                <h3>Bien</h3>
-            </div>
+            <NavItems />
         </div>
     </div>
   )
