@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .navbar {
     width: 100%;
     height: 90px;
@@ -7,7 +9,6 @@
     background-color: #fbfbfbf9;
     padding: 1em;
     box-shadow: 0 0 8px #40404069;
-
     // overflow: hidden; // ?
 
     .navbar-wrapper {
@@ -34,18 +35,31 @@
             img {
                 max-height: 100%;
                 margin-right: 0.5em;
+
+                // * REVISAR
+                animation: animateLogo 2s cubic-bezier(.6, .7, .8, 1) 1;
+                @keyframes animateLogo {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    50%{
+                        transform: rotate(180deg);
+                    }
+                    100% {
+                        transform: rotate(0deg);
+                    }
+                }
             }
 
             h1 {
                 letter-spacing: -1px;
-                font-size: 2.3em;
+                font-size: 2.1em;
                 color: #444;
             }
         }
 
         .nav-items {
             flex: 1;
-            justify-content: flex-end;
             height: 100%;
             display: flex;
             justify-content: space-around;
@@ -55,27 +69,85 @@
 
                 a {
                     text-decoration: none;
-                    font-size: 1.4em;
+                    font-size: 1.2em;
                     font-weight: 600;
                     color: #555;
                     letter-spacing: 1px;
                     height: 100%;
                     position: relative;
-                    transition: all .2s ease;
                     
                     &:hover::before {
                         content: '';
                         width: 100%;
-                        height: 40%;
-                        border-radius: 6px; // ?
-                        background-color: #0c919160;
+                        height: 38%;
+                        border-radius: 5px; // ?
+                        background-color: #0c919150;
                         position: absolute;
-                        bottom: 3px; // ?
+                        bottom: 5px; // ?
                         left: 0;
-                        filter: blur(2px); // ?
+                        filter: blur(0.08em); // ?
+                    } 
+                }
+            }
+        }
+    }
+}
+
+// Mediaqueries
+.navbar {
+
+    @include mobile {
+        padding: 0.4em;
+    }
+
+    @include tablet-mobile {
+        height: 80px;
+    }
+
+    .navbar-wrapper {
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .logo-container {
+            img {
+
+                @include mobile {
+                    margin-right: 0.1em;
+                    height: 70%;
+                }
+            }
+
+            h1 {
+
+                @include mobile {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        .nav-items {
+
+            @include tablet-desktop {
+                justify-content: space-between;
+                gap: 0.8em;
+            }
+        
+            @include tablet-mobile {
+                display: none;
+            }
+
+            .item-container {
+
+                a {
+
+                    @include tablet-desktop {
+                        font-size: 0.9em;
                     }
                 }
             }
         }
     }
+
 }

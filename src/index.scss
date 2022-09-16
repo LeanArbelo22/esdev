@@ -8,7 +8,25 @@
 //  Variables (colores)
 
 // Mediaqueries
+@mixin tablet-desktop {
+  // tablets en horizontal, escritorios normales
+  @media (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }  
+}
 
+@mixin tablet-mobile {
+  // tablets en vertical, moviles en horizontal
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
 
 * {
   margin: 0;
