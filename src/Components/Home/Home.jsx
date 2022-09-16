@@ -1,10 +1,12 @@
 import React from 'react';
+// import Loader from '../Animations/Loader/Loader';
 import './Home.scss';
 
 function Home() {
   return (
     <div className='home'>
-        <h1>HOME</h1>
+        {/* <Loader /> */}
+        <h1>Home</h1>
     </div>
   )
 }

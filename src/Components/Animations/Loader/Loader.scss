@@ -1,0 +1,52 @@
+.loader {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(#19519150, #19719150, #19919150);
+    animation: animate .6s linear infinite;
+
+    span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(#19519150, #19719150, #19919150);
+
+        &:nth-child(1) {
+            filter: blur(5px);
+        }
+
+        &:nth-child(2) {
+            filter: blur(10px);
+        }
+
+        &:nth-child(3) {
+            filter: blur(20px);
+        }
+        
+        &:nth-child(4) {
+            filter: blur(40px);
+        }        
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

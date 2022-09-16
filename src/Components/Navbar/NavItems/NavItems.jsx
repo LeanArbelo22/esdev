@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import '../Navbar.scss';
 
 const Item = ({children, url}) => <NavLink to={`/${url}`}>{children}</NavLink>;
-const pages = [{text: 'Desarrollo', url: 'development'}, {text: 'Nosotros', url: 'us'}, {text: 'Trabajos', url: 'works'}];
+const pages = [{text: 'Desarrollos', url: ''}, {text: 'Nosotros', url: 'us'}, {text: 'Trabajos', url: 'works'}, {text: 'Contacto', url: 'contact'}];
 
 function NavItems() {
   return (
