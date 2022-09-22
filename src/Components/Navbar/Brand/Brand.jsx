@@ -3,12 +3,12 @@ import Letters from '../../Animations/Letters/Letters';
 
 function Brand() {
 
-    const [letterClass, setLetterClass] = useState()
+    const [letterClass, setLetterClass] = useState();
 
     const logoArray = ['E','S','D','e','v'];
 
     useEffect(() => {
-        setLetterClass('text-animate-hover')
+        setLetterClass('text-animate-hover brand');
     }, [])
 
     return (

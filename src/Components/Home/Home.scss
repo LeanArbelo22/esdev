@@ -1,13 +1,18 @@
+@import '../../index.scss';
+
 .home {
     width: 100%;
-    height: calc(100vh - 65px);
+    height: 100%;
     position: relative;
-    z-index: 999;
-    top: 65px;
-    padding: 3.5em;
-
-    // Para probar el loader
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+
+    .home-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+    }
 }

@@ -1,9 +1,12 @@
 .text-animate-hover {
-    transition: all 0.3s ease;
-    animation: animate 2s cubic-bezier(.6, .7, .8, 1) 1; // !! CUIDADO, esto deberia ser solo para Brand
+    transition: all .3s ease;
+
+    &.brand {
+        animation: animate 2s cubic-bezier(.6, .7, .8, 1) 1;
+    }
 
     &:hover {
-        color: #0c919170;
+        color: #3dbdd6;
     }
 }
 
@@ -12,7 +15,7 @@
         color: #555;
     }
     50% {
-        color: #0c919170;
+        color: #3dbdd6;
     }
     100% {
         color: #555;
