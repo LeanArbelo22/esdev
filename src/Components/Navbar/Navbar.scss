@@ -92,12 +92,13 @@
                             height: 35%; //55%;
                             border-radius: 4px;
                             background-color: #3dbdd6;
-                            opacity: 0.9;
+                            opacity: 0.8;
                             position: absolute;
                             bottom: 5px; //7px;
                             left: 0;
                             z-index: -1;
-                            // filter: blur(0.5em); // ?
+
+                            filter: blur(0.05em); // ?
                         } 
                     }
 
