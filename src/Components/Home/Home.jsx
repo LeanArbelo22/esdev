@@ -1,16 +1,34 @@
-import React from 'react';
-import SocialNetworks from '../SocialNetworks/SocialNetworks';
-// import Loader from '../Animations/Loader/Loader';
+import React, { useState, useEffect } from 'react';
+import { FaFly } from 'react-icons/fa';
+import BrandImage from '../../assets/img/Marca.png';
+import CodeImage from '../../assets/img/Compu.png';
 import './Home.scss';
 
 function Home() {
+  const [displayContentLeft, setDisplayContentLeft] = useState(false);
+  const [displayContentRight, setDisplayContentRight] = useState(false);
+
+
+  useEffect(() => {
+    setTimeout(() => setDisplayContentLeft(true), 100)
+    setTimeout(() => setDisplayContentRight(true), 1200)
+  }, [])
+
   return (
     <div className='home'>
-      <div className="home-top">
-        <h1>Home</h1>
+      <div className='container-home'>
+        <div className={`home-top ${displayContentLeft && 'open'}`}>
+          <h2>Somos</h2>
+          <img src={BrandImage} alt='Texto marca en imagen' />
+          <p>Nos dedicamos al desarrollo de software personalizado para empresas, negocios o emprendimientos.</p>
+          <p>Nuestro principal objetivo es ayudarte a potenciar el desarrollo de tu empresa mediante una asesoria personalizada para asi planificar y ofrecerte una solucion unica y de calidad para tu negocio.</p>
+        </div>
+        <div className={`content ${displayContentRight && 'open'}`}>
+          <img src={CodeImage} alt='Imagen codigo' />
+        </div>
       </div>
-      <div className="home-footer">
-        <SocialNetworks />
+      <div className={`home-footer ${displayContentLeft && 'open'}`}>
+        <span><FaFly />Ciudad de Córdoba, Córdoba, Argentina</span>
       </div>
     </div>
   )

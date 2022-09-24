@@ -7,12 +7,207 @@
     display: flex;
     flex-direction: column;
 
+    .container-home {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+
+        .home-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90%;
+            transition: all 2s ease-out;
+            position: relative;
+            left: -100%;
+
+            &.open{
+                left: 0;
+            }
+
+            img {
+                width: 460px;
+            }
+
+            h2 {
+                color: #333;
+                align-self: flex-start;
+                margin-left: 26%;
+                font-weight: 500;
+            }
+
+            p {
+                color: #333;
+                margin-top: 1em;
+                width: 55%;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        .content {
+            position: relative;
+            right: -40%;
+            transition: all 1.2s ease-out;
+            opacity: 0;
+
+            &.open {
+                opacity: 1;
+                right: 6em;
+            }
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+
     .home-footer {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
-        bottom: 0;
+        bottom: -50px;
+        transition: all 1s ease-out;
+
+        &.open {
+            bottom: 0;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 0.9em;
+            transition: all .6s ease;
+
+            svg {
+                margin-right: 0.5em;
+                font-size: 1.3em;
+                color: #3dbdd6ee;
+                transition: all .6s ease;
+            }
+
+            &:hover {
+                color: #555;
+
+                & > svg {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}
+
+// Mediaqueries
+.home {
+
+    .container-home {
+
+        .home-top {
+            @include tablet-mobile {
+                h2 {
+                    font-size: 1.6em;
+                    font-weight: 600;
+                    color: #111;
+                }
+
+                p {
+                    font-weight: 600;
+                    font-size: 1.15em;
+                    color: #111;
+                }
+
+            }
+
+            @include tablet-portatil {
+                h2 {
+                    font-size: 1.6em;
+                    font-weight: 600;
+                    color: #111;
+                }
+
+                p {
+                    font-weight: 600;
+                    font-size: 1.15em;
+                    color: #111;
+                }
+            }
+
+            @include mobile {
+                justify-content: space-around;
+                padding: 0.5em;
+
+                img {
+                    width: 100%;
+                }
+
+                h2 {
+                    margin-left: 0;
+                    align-self: center;
+                    color: #111;
+                }
+
+                p {
+                    width: 75%;
+                    font-size: 1em;
+                    color: #111;
+                }
+            }
+
+        }
+
+        .content {
+            @include tablet-mobile {
+                position: absolute;
+
+                img {
+                    width: 100%;
+                }
+
+                &.open {
+                    right: 0;
+                    opacity: 0.11;
+                }
+            }
+
+            @include tablet-portatil {
+                position: absolute;
+
+                img {
+                    width: 100%;
+                }
+
+                &.open {
+                    right: 0;
+                    opacity: 0.1;
+                }
+            }
+
+            @include mobile {
+                top: 15%;
+
+                img {
+                    width: 150%;
+                }
+                
+                &.open {
+                    left: 0;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    
+    .home-footer {
+        span {
+            @include mobile {
+                font-size: 0.8em;
+            }
+        }
     }
 }

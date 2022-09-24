@@ -6,7 +6,7 @@
     margin-bottom: 0.5em;
     border: 1px solid #555;
     background-color: #fff; //transparent;
-    transition: all .3s ease;
+    transition: all .4s ease;
     position: relative;
     overflow: hidden;
     display: inline-flex; // ? ayudo a posicionar el content!
@@ -21,7 +21,7 @@
         font-weight: 500;
         position: relative;
         z-index: 10;
-        transition: all .3s ease;
+        transition: all .4s ease;
         color: #222;
     }
 
@@ -34,7 +34,7 @@
         left: 50%;
         border-radius: 50%;
         z-index: 9;
-        transition: all .3s ease-in-out;
+        transition: all .7s ease-in-out;
     }
 
     &:hover{
@@ -43,7 +43,12 @@
     }
 
     &:hover::after{
-        transform: scale(600);
+        transform: scale(400);
         background-color: #3dbdd675;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #3dbdd6;
+        border-radius: 7px;
     }
 }

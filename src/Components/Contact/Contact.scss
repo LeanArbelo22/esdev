@@ -5,6 +5,7 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 
     & div {
         height: 100%;
@@ -17,16 +18,28 @@
         justify-content: center;
 
         img {
+            opacity: 0;
             width: 100%;
-            transform: rotate(90deg);
+            transition: all 1s ease-out;
+
+            &.show-img {
+                opacity: 1;
+                transform: rotate(90deg);
+            }
         }
     }
 
     .form-container {
         flex: 0.9;
-        padding: 1em;
         display: flex;
         align-items: center;
+        position: relative;
+        right: -100%;
+        transition: all 1.5s ease-out;
+
+        &.open {
+            right: 0;
+        }
 
         h1 {
             margin-bottom: 0.5em;
@@ -67,6 +80,38 @@
                 min-height: 150px;
                 width: 100%;
             }
+
+            .received {
+                color: #444;
+                font-weight: 600;
+                font-size: .9em;
+                margin-top: .1em;
+            }
+        
+        }
+    }
+
+    .footer {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -50%;
+        transition: all 2.3s ease-out;
+
+        &.open {
+            right: 1em;
+        }
+    }
+
+    .mobile-footer {
+        display: none;
+        transition: all 2s ease-out;
+        opacity: 0;
+
+        &.open {
+            opacity: 1;
         }
     }
 
@@ -79,11 +124,13 @@
         @include mobile {
             display: none;
         }
-        
-        img {
-            @include tablet-mobile {
-                transform: rotate(0);
-            }
+
+        @include tablet-mobile {
+            display: none;
+        }
+
+        @include tablet-portatil {
+            flex: .4;
         }
     }
 
@@ -105,19 +152,35 @@
             @include mobile {
                 width: 100%;
                 margin-left: 0;
-                width: 224px;
+                width: 240px;
+                justify-content: flex-start;
             }
 
             textarea {
                 @include tablet-portatil {
-                    width: 224px;
+                    width: 240px;
                 }
                 
                 @include tablet-mobile {
-                    width: 224px;
+                    width: 240px;
                 }
             }
         }
         
     }
+        .footer {
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .mobile-footer {
+            @include mobile {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                bottom: 4em;
+            }
+        }
 }

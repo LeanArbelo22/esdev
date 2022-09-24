@@ -3,28 +3,28 @@ import { Link } from 'react-router-dom';
 import './SocialNetwork.scss';
 import { FaInstagram, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 
-function SocialNetworks() {
+function SocialNetworks({ direction = '' }) {
   const icons = [
     {
-      link: '/instagram',
+      link: '/#ig',
       icon: <FaInstagram />
     },
     {
-      link: '/linkedin',
+      link: '/#li',
       icon: <FaLinkedinIn />
     },
     {
-      link: '/whatsapp',
+      link: '/#wa',
       icon: <FaWhatsapp />
     }
   ]
 
   return (
-    <ul className={`icons`}>
+    <ul className={`icons ${direction}`}>
       {
         icons.map(icon => {
           return (
-            <li key={icon}>
+            <li key={icon.link}>
               <Link to={icon.link}>
                 <span></span>
                 <span></span>

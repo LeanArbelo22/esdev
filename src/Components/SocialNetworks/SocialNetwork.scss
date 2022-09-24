@@ -4,12 +4,20 @@
     padding: 0;
     display: flex;
 
+    &.column {
+        flex-direction: column;
+
+        li {
+            margin: 1.25em 0;
+        }
+    }
+
     li {
         position: relative;
         list-style: none;
         width: 50px;
         height: 50px;
-        margin: 0 1.1em;
+        margin: 0 1.15em;
         // transform: rotate(-30deg) skew(25deg); // -15deg 15deg
 
         span {
@@ -26,42 +34,42 @@
             color: #fff;
             font-size: 1.8em;
             border-radius: 10px;
-            border-top: 1px solid #ddd;
-            border-right: 1px solid #ddd;
+            // border-top: 1px solid #ddd;
+            // border-right: 1px solid #ddd;
         }
 
         &:nth-child(1) span {
-            background: radial-gradient(circle at 30% 107%, #fdf497dd 5%, #fd5949dd 45%, #d6249fdd 60%, #285AEBdd 90%);
-            background: -webkit-radial-gradient(circle at 30% 107%, #fdf497dd 5%, #fd5949dd 45%, #d6249fdd 60%, #285AEBdd 90%);
+            background: radial-gradient(circle at 30% 107%, #fdf497ee 5%, #fd5949ee 45%, #d6249fee 60%, #285AEBee 90%);
+            background: -webkit-radial-gradient(circle at 30% 107%, #fdf497ee 5%, #fd5949ee 45%, #d6249fee 60%, #285AEBee 90%);
         }
 
         &:nth-child(2) span {
-            background: #3f5ea2dd;
+            background: #3f5ea2ee;
         }
 
         &:nth-child(3) span {
-            background: #25D366dd;
+            background: #25D366ee;
         }
 
         &:hover {
             span {
                 &:nth-child(5) {
-                    transform: translate(40px, -40px);
+                    transform: translate(-40px, 0);
                     opacity: 1;
                 }
 
                 &:nth-child(4) {
-                    transform: translate(30px, -30px);
+                    transform: translate(-30px, 0);
                     opacity: .8;
                 }
 
                 &:nth-child(3) {
-                    transform: translate(20px, -20px);
+                    transform: translate(-20px, 0);
                     opacity: .6;
                 }
 
                 &:nth-child(2) {
-                    transform: translate(10px, -10px);
+                    transform: translate(-10px, 0);
                     opacity: .4;
                 }
 
