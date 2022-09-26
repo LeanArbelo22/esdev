@@ -152,11 +152,10 @@
             @include mobile {
                 width: 100%;
                 margin-left: 0;
-                width: 240px;
                 justify-content: flex-start;
             }
 
-            textarea {
+            textarea, input {
                 @include tablet-portatil {
                     width: 240px;
                 }
@@ -180,7 +179,7 @@
                 display: flex;
                 justify-content: center;
                 position: relative;
-                bottom: 4em;
+                bottom: 2.7em;
             }
         }
 }

@@ -11,7 +11,7 @@ function Home() {
 
   useEffect(() => {
     setTimeout(() => setDisplayContentLeft(true), 100)
-    setTimeout(() => setDisplayContentRight(true), 1200)
+    setTimeout(() => setDisplayContentRight(true), 900)
   }, [])
 
   return (
@@ -21,7 +21,7 @@ function Home() {
           <h2>Somos</h2>
           <img src={BrandImage} alt='Texto marca en imagen' />
           <p>Nos dedicamos al desarrollo de software personalizado para empresas, negocios o emprendimientos.</p>
-          <p>Nuestro principal objetivo es ayudarte a potenciar el desarrollo de tu empresa mediante una asesoria personalizada para asi planificar y ofrecerte una solucion unica y de calidad para tu negocio.</p>
+          <p>Nuestro principal objetivo es ayudarte a potenciar el desarrollo de tu empresa al ofrecerte una solucion unica y de calidad para tu negocio.</p>
         </div>
         <div className={`content ${displayContentRight && 'open'}`}>
           <img src={CodeImage} alt='Imagen codigo' />
