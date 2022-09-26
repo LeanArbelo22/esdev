@@ -10,7 +10,7 @@
 
 // Mediaqueries
 @mixin desktop {
-  @media (min-width: 1200px){
+  @media (min-width: 1500px){
     // pantallas de escritorio en adelante
     @content;
   }
@@ -80,4 +80,9 @@
         padding: 1.2em;
     }
   }
+
+  @include desktop {
+      font-size: 25px;
+  }
+
 }

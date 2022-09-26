@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaFly } from 'react-icons/fa';
+import { BsPin } from 'react-icons/bs';
 import BrandImage from '../../assets/img/Marca.png';
 import CodeImage from '../../assets/img/Compu.png';
 import './Home.scss';
@@ -10,7 +10,7 @@ function Home() {
 
 
   useEffect(() => {
-    setTimeout(() => setDisplayContentLeft(true), 100)
+    setDisplayContentLeft(true)
     setTimeout(() => setDisplayContentRight(true), 900)
   }, [])
 
@@ -28,7 +28,7 @@ function Home() {
         </div>
       </div>
       <div className={`home-footer ${displayContentLeft && 'open'}`}>
-        <span><FaFly />Ciudad de Córdoba, Córdoba, Argentina</span>
+        <span><BsPin />Ciudad de Córdoba, Córdoba, Argentina</span>
       </div>
     </div>
   )
