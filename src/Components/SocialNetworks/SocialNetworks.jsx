@@ -6,15 +6,15 @@ import { FaInstagram, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 function SocialNetworks({ direction = '' }) {
   const icons = [
     {
-      link: '/#ig',
+      link: 'https://www.instagram.com/esdev.argentina/',
       icon: <FaInstagram />
     },
     {
-      link: '/#li',
+      link: '/#',
       icon: <FaLinkedinIn />
     },
     {
-      link: '/#wa',
+      link: 'https://wa.me/5493512503060',
       icon: <FaWhatsapp />
     }
   ]
@@ -25,13 +25,13 @@ function SocialNetworks({ direction = '' }) {
         icons.map(icon => {
           return (
             <li key={icon.link}>
-              <Link to={icon.link}>
+              <a href={icon.link} target="_blank" rel="noreferrer">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 <span>{icon.icon}</span>
-              </Link>
+              </a>
             </li>
           )
         })

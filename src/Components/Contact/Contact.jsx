@@ -24,7 +24,7 @@ function Contact() {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_gmail', 'template_rac5vr4', form.current, 'egrw1HiuWJA3l-Wwv')
+    emailjs.sendForm('service_r4quxdd', 'template_280jxcq', form.current, '_UkZjLnaeV3bWTjx2')
       .then((result) => {
         console.log(result.text);
       }, (error) => {

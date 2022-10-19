@@ -11,7 +11,7 @@ function Products() {
     const form = useRef();
     const sendEmail = (e) => {
       e.preventDefault();
-      emailjs.sendForm('service_gmail', 'template_0l0au5g', form.current, 'egrw1HiuWJA3l-Wwv')
+      emailjs.sendForm('service_r4quxdd', 'template_29xq9kh', form.current, '_UkZjLnaeV3bWTjx2')
         .then((result) => {
           console.log(result.text);
         }, (error) => {
@@ -28,8 +28,9 @@ function Products() {
                 <span>(SEF)</span>
             </div>
             <div className="description">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis aliquid non tempora molestiae deserunt unde adipisci beatae. Suscipit quis ratione repudiandae odit aut consequatur nesciunt!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptate illum quas accusamus, incidunt velit sunt sint temporibus at dolorum nam ratione delectus quasi eligendi.</p>
+                <p>Sistema diseñado para la gestion automatica de consultas de clientes via Whatsapp, que mediante un chatbot entrenado con inteligencia artificial separa al cliente potencial del 
+                que solo tiene curiosidad sobre el producto o servicio ofrecido. 
+                Ademas ofrece un control total de las conversaciones y datos de los clientes permitiendo al administrador supervisar a sus empleados y hacer un correcto seguimiento de cada consulta en tiempo real.</p>
             </div>
             <Button click={handleClick}>Más información</Button>
             { 

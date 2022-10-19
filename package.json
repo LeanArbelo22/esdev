@@ -1,7 +1,12 @@
 {
   "name": "esdev",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Leandro Arbelo - Github @LeanArbelo22"
+  },
   "private": true,
+  "homepage": "http://esdev-arg.com",
+  "description": "ESDev - Enterprise Software Development web app",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@testing-library/jest-dom": "^5.16.5",
