@@ -127,36 +127,40 @@
 
             @include tablet-portatil {
                 h2 {
-                    font-size: 1.6em;
+                    font-size: 1.9em;
                     font-weight: 600;
                     color: #111;
+                }
+
+                img {
+                    width: 80%;
                 }
 
                 p {
                     width: 80%;
                     font-weight: 600;
-                    font-size: 1.05em;
+                    font-size: 1.6em;
                     color: #111;
                 }
             }
 
             @include mobile {
-                justify-content: space-around;
-                padding: 0.5em;
+                padding: 0;
 
                 img {
                     width: 100%;
                 }
 
                 h2 {
-                    margin-left: 0;
-                    align-self: center;
+                    margin-left: 25px;
+                    text-align: left;
                     color: #111;
                 }
 
                 p {
-                    width: 75%;
-                    font-size: 0.9em;
+                    text-align: left;
+                    width: 90%;
+                    font-size: 1.4em;
                     color: #111;
                 }
             }
@@ -206,8 +210,14 @@
     }
     
     .home-footer {
+        @include tablet-mobile {
+            &.open {
+                bottom: 35px;
+            }
+        }
+
         span {
-            @include mobile {
+            @include tablet-mobile {
                 font-size: 0.75em;
             }
         }

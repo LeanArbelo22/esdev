@@ -3,7 +3,8 @@ import './Navbar.scss';
 import LogoImg from '../../assets/img/Logo-notext.png';
 import NavItems from './NavItems/NavItems';
 import Brand from './Brand/Brand';
-import Hamburguer from './Hamburguer/Hamburguer';
+import Burguer from './Burguer/Burguer';
+import { Link } from 'react-router-dom';
 
 function Navbar({ isOpen, setIsOpen }) {
   return (
@@ -11,10 +12,12 @@ function Navbar({ isOpen, setIsOpen }) {
         <div className='navbar-wrapper'>
             <div className='logo-container'>
                 <img src={LogoImg} alt="logo esdev" />
+              <Link to="/">
                 <Brand />
+              </Link>
             </div>
             <NavItems />
-            <Hamburguer isOpen={isOpen} setIsOpen={setIsOpen} />
+            <Burguer isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
     </div>
   )

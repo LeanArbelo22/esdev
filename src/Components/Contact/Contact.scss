@@ -138,11 +138,13 @@
         @include tablet-mobile {
             flex: 1;
             width: 100%;
+            padding: 2em;
         }
 
         @include mobile {
             flex: 1;
             width: 100%;
+            padding: 2em;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -179,7 +181,7 @@
                 display: flex;
                 justify-content: center;
                 position: relative;
-                bottom: 2.7em;
+                bottom: 10em;
             }
         }
 }

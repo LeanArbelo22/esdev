@@ -8,6 +8,10 @@
     align-items: center;
     justify-content: center;
 
+    @include mobile {
+        align-items: unset;
+    }
+
     .first {
         display: grid; 
         grid-template-columns: repeat(3, 1fr); 
@@ -34,8 +38,8 @@
             justify-content: center;
             text-align: center;
             border-radius: 1em;
-            border-left: 5px solid #3dbdd6;
-            border-right: 5px solid #3dbdd6;
+            border-top: 4px solid #3dbdd6;
+            border-bottom: 4px solid #3dbdd6;
             padding: 1.5em 1.5em;
             position: relative;
 
@@ -44,23 +48,23 @@
             }
 
             &:nth-child(2) {
-                animation: 1.6s 1 ease-in-out aparecer;   
+                animation: 1.3s 1 ease-in-out aparecer;   
             }
 
             &:nth-child(3) {
-                animation: 2.4s 1 ease-in-out aparecer;   
+                animation: 1.6s 1 ease-in-out aparecer;   
             }
 
             &:nth-child(4) {
-                animation: 3s 1 ease-in-out aparecer;   
+                animation: 1.9s 1 ease-in-out aparecer;   
             }
 
             &:nth-child(5) {
-                animation: 3.5s 1 ease-in-out aparecer;   
+                animation: 2.1s 1 ease-in-out aparecer;   
             }
 
             &:nth-child(6) {
-                animation: 4s 1 ease-in-out aparecer;   
+                animation: 2.4s 1 ease-in-out aparecer;   
             }
             
 
@@ -76,15 +80,15 @@
         @include mobile {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 1fr);
-            grid-gap: 0.4em;
+            grid-gap: 1em;
 
             & > div {
                 height: 5em;
                 padding: 2em;
-                border-left: none;
-                border-right: none;
-                border-top: 5px solid #3dbdd6;
-                border-bottom: 5px solid #3dbdd6;
+                border-left: 4px solid #3dbdd6;;
+                border-right: 4px solid #3dbdd6;;
+                border-top: none;
+                border-bottom: none;
 
                 h3 {
                     font-size: 100%;
