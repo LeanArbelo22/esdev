@@ -160,7 +160,7 @@
                 p {
                     text-align: left;
                     width: 90%;
-                    font-size: 1.4em;
+                    font-size: 1.38em;
                     color: #111;
                 }
             }
@@ -213,6 +213,12 @@
         @include tablet-mobile {
             &.open {
                 bottom: 35px;
+            }
+        }
+
+        @include mobile {
+            &.open {
+                bottom: 50px;
             }
         }
 

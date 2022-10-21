@@ -80,7 +80,7 @@
         @include mobile {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 1fr);
-            grid-gap: 1em;
+            grid-gap: 0.8em;
 
             & > div {
                 height: 5em;
