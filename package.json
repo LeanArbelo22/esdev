@@ -5,7 +5,7 @@
     "name": "Leandro Arbelo - Github @LeanArbelo22"
   },
   "private": true,
-  "homepage": "http://esdev-arg.com",
+  "homepage": "http://esdev-arg.com/",
   "description": "ESDev - Enterprise Software Development web app",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",

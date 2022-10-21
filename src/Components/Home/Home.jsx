@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     setDisplayContentLeft(true)
     setTimeout(() => setDisplayContentRight(true), 900)
-  }, [])
+  }, []);
 
   return (
     <div className='home'>
