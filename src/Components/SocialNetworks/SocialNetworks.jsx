@@ -14,7 +14,7 @@ function SocialNetworks({ direction = '' }) {
       icon: <FaLinkedinIn />
     },
     {
-      link: 'https://wa.me/5493512503060',
+      link: 'https://wa.me/5493513818986',
       icon: <FaWhatsapp />
     }
   ]
