@@ -15,13 +15,13 @@ function Services() {
                 <h3>Desarrollo y administracion de Bases de Datos SQL y NoSQL</h3>
             </div>
             <div className="datac">
-                <h3>Data Cience</h3>
+                <h3>Ciberseguridad y asesoramiento en Ciberdelitos</h3>
             </div>
             <div className="cloud">
-                <h3>Cloud Computing Servidores en la nube</h3>
+                <h3>Cloud Computing - Servidores en la nube</h3>
             </div>
             <div className="bot">
-                <h3>Bots inteligentes para el manejo de redes sociales</h3>
+                <h3>Bots para el manejo de redes sociales</h3>
             </div>
         </div>
     </div>
